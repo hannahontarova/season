@@ -1,0 +1,113 @@
+body {
+    background-color: rgb(98, 98, 238);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    mix-blend-mode: color-dodge;
+}
+#snowman {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#snowman .hat {
+    height: 0;
+    width: 40px;
+    border-bottom: 40px solid rgb(109, 109, 109);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    z-index: 1000;
+    margin-bottom: -15px;
+}
+
+#snowman .ball{
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+#snowman .head {
+    height: 75px;
+    width: 75px;
+    margin-bottom: -20px;
+    z-index: 100;
+}
+#snowman .head .eyes {
+    display: flex;
+    justify-content: space-between;
+    width: 40px;
+    position: relative;
+    top: 20px;
+    margin: auto;
+}
+
+#snowman .head .eyes .eye {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+#snowman .head .carrot {
+    width: 0;
+    height: 0;
+    position: relative;
+    top: 25px;
+    left: -15px;
+    border-top: 5px solid transparent;
+    border-right: 50px solid orange;
+    border-bottom: 5px solid transparent;
+}
+
+#snowman .head .small {
+    position: relative;
+    top: 20px;
+    left: 30px;
+    height: 25px;
+    width: 10px;
+    border-radius: 50px 0 0 50px;
+    border-top: 5px solid #000;
+    border-left: 5px solid #000;
+    border-bottom: 5px solid #000;
+    transform: rotate(-90deg);
+}
+#snowman .body {
+    height: 125px;
+    width: 125px;
+    margin-bottom: -60px;
+    z-index: 10;
+}
+
+#snowman .body .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90px;
+    position: relative;
+    top: 30px;
+}
+
+#snowman .body .button {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: brown;
+    margin-bottom: 20px;
+}
+
+#snowman .bottom {
+    height: 175px;
+    width: 175px;
+    z-index: 1;
+}
