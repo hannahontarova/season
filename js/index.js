@@ -7,29 +7,13 @@
 //         alert(this.seasonName + this.text)
 //     }
 // }
-// Установите количество снежинок (больше 30 - 400 не рекомендуется)
 var snowmax=400
-
-// Установите цвета снега. Добавьте столько цветов, сколько захотите
 var snowcolor=new Array("#b9dff5","#b9dff5","#b9dff5","#b9dff5","#b9dff5")
-
-// Установите шрифты, которые создают снежинки. Добавьте столько шрифтов, сколько захотите
 var snowtype=new Array("Times")
-
-// Установите букву, из которой будет создана ваша снежинка (recommended: * )
 var snowletter="*"
-
-// Установите скорость погружения (рекомендуемые значения от 0.3 до 2)
 var sinkspeed=0.6
-
-// Установите максимальный размер снежинок
 var snowmaxsize=35
-
-// Установите минимальный размер снежинок
 var snowminsize=8
-
-// Set 1 for all-over-snowing, set 2 for left-side-snowing
-// Set 3 for center-snowing, set 4 for right-side-snowing
 var snowingzone=1
 
 var snow=new Array()
@@ -82,7 +66,6 @@ function initsnow() {
         }
         movesnow()
 }
-
 function movesnow() {
         for (i=0;i<=snowmax;i++) {
                 crds[i] += x_mv[i];
@@ -107,7 +90,6 @@ for (i=0;i<=snowmax;i++) {
 if (browserok) {
         window.onload=initsnow
 }
-
 // создать функцию-конструктор, которая будет позволять создавать шаблонные объекты со следущими статическими свойствами
 // Количество месяцев
 // Текущий год
@@ -119,10 +101,13 @@ function Seasons (season = 'любое время года'){
     this.seasonName = season
     this.text = ' - прекрасное время года!'
     this.textShow = function(){
-        alert(this.seasonName + this.text)
+        if (this.seasonName === 'зима' || this.seasonName === 'весна' || this.seasonName === 'лето' || this.seasonName === 'щсень'){
+                alert(this.seasonName + this.text)
+        }else {
+                alert('Любое время года прекрасно!')
+            }
     }
 }
-
 const seasonNew = new Seasons(prompt('Введите название времени года'))
 seasonNew.textShow()
 
